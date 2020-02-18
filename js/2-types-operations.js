@@ -19,12 +19,46 @@ var total = 0;
 
 // 2b Type conversion
 // Para mantener la coherencia podemos igualar los tipos en la operación
+
+function priceFormatted(number) {
+  return `$${number.toFixed(2)}`
+}
+
 total = coffeePrice * parseFloat(cupsOfCoffee);
 // Usamos toFixed() para mostrar N número de decimales
-console.log("Total: " + total.toFixed(2)); // -> Total: 75.60
+console.log("Total: " + priceFormatted(total)); // -> Total: 75.60
 // Supongamos que alguien por error guarda cierta cantidad como un String, pasa
 var breads = "3";
 // ¿Qué va a suceder? Que obtendremos mal el número de artículos
 console.log("Artículos vendidos: " + (cupsOfCoffee + breads)); // -> Artículos vendidos: 43
 // De vuelta, realizamos una conversión para asegurarnos de no mezclar tipos y deformar los datos
 console.log("Artículos vendidos: " + (cupsOfCoffee + parseInt(breads))); // -> Artículos vendidos: 7
+
+// 2c Strings
+var artist = "Chelsea Wolfe";
+console.log(artist);
+console.log(typeof(artist));
+
+// Concatenation
+var artistInfo = artist + " tiene 5 discos";
+console.log(artistInfo);
+console.log();
+
+// Interpolation
+var coffeeInfo = `El precio del café es ${coffeePrice} y yo pedí ${cupsOfCoffee} tazas, entonces pagaré: ${priceFormatted(total)}`;
+console.log(coffeeInfo);
+
+function greeting(name) {
+  return `Hola, ${name}`
+}
+
+console.log(greeting("David"));
+console.log(greeting("Ari"));
+console.log(greeting("Norma"));
+console.log(greeting(artist));
+
+// Strings methods
+console.log(artist.charAt(8));
+console.log(artist.length);
+console.log(artist.toUpperCase());
+console.log(artist.toLowerCase());
