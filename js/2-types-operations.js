@@ -62,3 +62,12 @@ console.log(artist.charAt(8));
 console.log(artist.length);
 console.log(artist.toUpperCase());
 console.log(artist.toLowerCase());
+
+// Challenge
+function countName(name) {
+	return `${name} tiene ${name.length} letras`;
+}
+
+console.log(countName("David"));
+console.log(countName("Ariana"));
+console.log(countName("Luis"));
