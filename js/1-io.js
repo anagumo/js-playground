@@ -24,7 +24,7 @@ console.log("2 elevado a la 4a: " + Math.pow(2, 4));
 // Challenge
 var nombre = prompt("Hola, cómo te llamas?");
 while (nombre == "") {
-	nombre = prompt("Hola, cómo te llamas?");
+  nombre = prompt("Hola, cómo te llamas?");
 }
 console.log("Bienvenido, " + nombre);
 
@@ -40,10 +40,10 @@ console.log("El área de un cuadrado es: " + (lado * lado));
 var isValidPassword = true
 var password = prompt("Cuál es tu contraseña?")
 if (password == "123") {
-	console.log(isValidPassword);
+  console.log(isValidPassword);
 } else {
-	isValidPassword = false;
-	console.log(isValidPassword);
+  isValidPassword = false;
+  console.log(isValidPassword);
 }
 
 // Constantes
@@ -58,8 +58,8 @@ console.log(typeof(pi));
 var edad = 30
 var fecha = new Date();
 if (fecha.getMinutes() == 38) {
-	edad += 1
-	console.log(edad);
+  edad += 1
+  console.log(edad);
 }
 
 edad -= 1

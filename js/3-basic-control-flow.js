@@ -31,11 +31,11 @@ let and = (3 == 3) && (1 != 2); // => true
 let or = (3 == 2) || (1 != 2); // => false
 
 if (3 != 3 && 1 != 2) {
-	console.log("Ambas condiciones se cumplen");
+  console.log("Ambas condiciones se cumplen");
 } else if (3 == 2 || 1 != 2) {
-	console.log("Almenos una condición es verdadera");
+  console.log("Almenos una condición es verdadera");
 } else {
-	console.log("Ninguna condición es verdadera");
+  console.log("Ninguna condición es verdadera");
 }
 
 // String Equality
@@ -53,16 +53,16 @@ console.log(`Estado del switch: ${!switchState}`);
 // 3b If Statement
 // We use if to validate a condition it's true
 if (0 > -1) {
-	console.log("Yep, 0 es mayor que -1");
+  console.log("Yep, 0 es mayor que -1");
 }
 
 // And else to validate if is false
 let animal = "Zorro";
 
 if (animal == "Gato" || animal == "Perro") {
-	console.log(`${animal} es un animal de casa`);
+  console.log(`${animal} es un animal de casa`);
 } else {
-	console.log(`${animal} no es un animal de casa`);
+  console.log(`${animal} no es un animal de casa`);
 }
 
 let systemPassword = "1998";
@@ -70,13 +70,13 @@ let loginAttempts = 1;
 let passwordInput = "1341";
 
 if (passwordInput == systemPassword && loginAttempts <= 3) { // 1. Password sea válido y puedas entrar
-	console.log("Bienvenido a tu banca");
+  console.log("Bienvenido a tu banca");
 } else if (passwordInput != systemPassword && loginAttempts <= 3) {
-	console.log("Tu contraseña es incorrecta");
+  console.log("Tu contraseña es incorrecta");
 } else if (passwordInput != systemPassword && loginAttempts == 3) {
-	console.log("Lo sentimos, tu cuenta ha sido bloqueada");
+  console.log("Lo sentimos, tu cuenta ha sido bloqueada");
 } else if (loginAttempts > 3) { // 2. Password sea válido pero que tu cuenta esté bloqueada
-	console.log("Lo sentimos, tu cuenta está bloqueada");
+  console.log("Lo sentimos, tu cuenta está bloqueada");
 }
 
 // Encapsulating Variables
@@ -84,9 +84,9 @@ let hoursStudied = 40
 let price = 0
 
 if (hoursStudied > 8) {
-	let extraHours = hoursStudied - 8
-	price = extraHours * 50
-	hoursStudied -= extraHours
+  let extraHours = hoursStudied - 8
+  price = extraHours * 50
+  hoursStudied -= extraHours
 }
 
 price += hoursStudied * 25
@@ -98,9 +98,9 @@ let a = 7
 let b = 13
 
 if (a > b) {
-	console.log(`${a} es mayor que ${b}`)
+  console.log(`${a} es mayor que ${b}`)
 } else {
-	console.log(`${b} es mayor que ${a}`)
+  console.log(`${b} es mayor que ${a}`)
 }
 
 let max = (a > b) ? a : b
@@ -108,7 +108,7 @@ console.log(`${max} es mayor`)
 
 // Falsy Values
 function isFalsy(param) { 
-	return param ? `${param} evalua a verdadero` : `${param} evalua a falso`
+  return param ? `${param} evalua a verdadero` : `${param} evalua a falso`
 }
 
 let falsy = false // => false
@@ -126,7 +126,7 @@ console.log(isFalsy(falsy))
 
 // Mini-Excercise
 function isEmpty(text) {
-	return text == ""
+  return text == ""
 }
 
 let name = "David"
@@ -137,15 +137,15 @@ console.log(isEmpty(name))
 let number = 1
 
 while(number <= 10) {
-	let result = number * 2;
-	console.log(`2 * ${number} = ${result}`)
-	number += 1
+  let result = number * 2;
+  console.log(`2 * ${number} = ${result}`)
+  number += 1
 }
 
 // Breaking out of a loop
 while(true) {
-	console.log("*");
-	if (number > 10) {
-		break
-	}
+  console.log("*");
+  if (number > 10) {
+    break
+  }
 }
