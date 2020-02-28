@@ -21,7 +21,7 @@ var total = 0;
 // Para mantener la coherencia podemos igualar los tipos en la operación
 
 function priceFormatted(number) {
-  return `$${number.toFixed(2)}`
+	return `$${number.toFixed(2)}`
 }
 
 total = coffeePrice * parseFloat(cupsOfCoffee);
@@ -49,7 +49,7 @@ var coffeeInfo = `El precio del café es ${coffeePrice} y yo pedí ${cupsOfCoffe
 console.log(coffeeInfo);
 
 function greeting(name) {
-  return `Hola, ${name}`
+	return `Hola, ${name}`
 }
 
 console.log(greeting("David"));
