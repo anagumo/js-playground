@@ -51,16 +51,12 @@ console.log(`Estado del switch: ${switchState}`);
 console.log(`Estado del switch: ${!switchState}`);
 
 // 3b If Statement
+// We use if to validate a condition it's true
 if (0 > -1) {
-	console.log("0 es mayor que -1");
+	console.log("Yep, 0 es mayor que -1");
 }
 
-if (-2 > -1) {
-	console.log("-2 es mayor que -1");
-} else {
-	console.log("-2 no es mayor que -1");
-}
-
+// And else to validate if is false
 let animal = "Zorro";
 
 if (animal == "Gato" || animal == "Perro") {
@@ -71,14 +67,85 @@ if (animal == "Gato" || animal == "Perro") {
 
 let systemPassword = "1998";
 let loginAttempts = 1;
-let inputPassword = "1341";
+let passwordInput = "1341";
 
 if (passwordInput == systemPassword && loginAttempts <= 3) { // 1. Password sea válido y puedas entrar
 	console.log("Bienvenido a tu banca");
-} else if (inputPassword != systemPassword && loginAttempts <= 3) {
+} else if (passwordInput != systemPassword && loginAttempts <= 3) {
 	console.log("Tu contraseña es incorrecta");
-} else if (inputPassword != systemPassword && loginAttempts == 3) {
+} else if (passwordInput != systemPassword && loginAttempts == 3) {
 	console.log("Lo sentimos, tu cuenta ha sido bloqueada");
 } else if (loginAttempts > 3) { // 2. Password sea válido pero que tu cuenta esté bloqueada
 	console.log("Lo sentimos, tu cuenta está bloqueada");
+}
+
+// Encapsulating Variables
+let hoursStudied = 40
+let price = 0
+
+if (hoursStudied > 8) {
+	let extraHours = hoursStudied - 8
+	price = extraHours * 50
+	hoursStudied -= extraHours
+}
+
+price += hoursStudied * 25
+console.log(`Tienes que pagar: ${price}`)
+
+// Ternary Operator
+// <Condition> ? True : False
+let a = 7
+let b = 13
+
+if (a > b) {
+	console.log(`${a} es mayor que ${b}`)
+} else {
+	console.log(`${b} es mayor que ${a}`)
+}
+
+let max = (a > b) ? a : b
+console.log(`${max} es mayor`)
+
+// Falsy Values
+function isFalsy(param) { 
+	return param ? `${param} evalua a verdadero` : `${param} evalua a falso`
+}
+
+let falsy = false // => false
+console.log(isFalsy(falsy))
+let falsy2 // => undefined
+console.log(isFalsy(falsy2))
+falsy = null // => null
+console.log(isFalsy(falsy))
+falsy = 0 // => 0
+console.log(isFalsy(falsy))
+falsy += falsy2 // => NaN
+console.log(isFalsy(falsy))
+falsy = "" // 
+console.log(isFalsy(falsy))
+
+// Mini-Excercise
+function isEmpty(text) {
+	return text == ""
+}
+
+let name = "David"
+console.log(isEmpty(name))
+
+// 3c Loops
+// While - condition is true
+let number = 1
+
+while(number <= 10) {
+	let result = number * 2;
+	console.log(`2 * ${number} = ${result}`)
+	number += 1
+}
+
+// Breaking out of a loop
+while(true) {
+	console.log("*");
+	if (number > 10) {
+		break
+	}
 }
