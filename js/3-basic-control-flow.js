@@ -149,3 +149,17 @@ while(true) {
     break
   }
 }
+
+// Do While
+let x = 0
+let y = 0
+
+do {
+  x += 1;
+  console.log(`Do while: ${x}`);
+} while (x < 10);
+
+while (y < 10) {
+  y += 1;
+  console.log(`While: ${y}`);
+}
