@@ -8,7 +8,7 @@ In the for loop below, how many instances of “a” will there be in aLotOfAs? 
 let aLotOfAs = "";
 
 for (var i = 0; aLotOfAs.length < 10; i++) {
-	aLotOfAs += "a";
+  aLotOfAs += "a";
 }
 ```
 
