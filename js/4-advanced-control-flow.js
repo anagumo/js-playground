@@ -9,7 +9,7 @@ for (var i = 1; i <= 10; i++) {
   console.log(`90 * ${i} = ${90 * i}`);
 }
 
-// 4b Mini exercices
+// Mini exercices
 
 for (var i = 1; i <= 10; i++) {
   if (i % 2 == 0) {
